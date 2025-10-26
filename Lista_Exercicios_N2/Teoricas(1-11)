@@ -1,0 +1,37 @@
+1. Alocação estática significa que o espaço de memória necessário para armazenar o conjunto de elementos é reservado em tempo de compilação. 
+   O tamanho desse bloco de memória é fixo e não pode ser alterado durante a execução do programa. 
+   Um exemplo clássico é a declaração de um vetor com um tamanho literal: int meu_vetor[100];.
+2. Alocação estática ocorre em tempo de compilação com a memória geralmente sendo alocada em stack ou na area de dados,seu tamanho é fixo e a memoria é liberada automaticamente quando a variavel sai do escopo ou o programa termina.
+   Alocação dinâmica ocorre em tempo de execução com a memória alocada na heap, seu tamanho é flexível e pode ser determinado durante a execução do programa, a memória não é liberada automaticamente programador é responsável por liberá-la manualmente.
+3. Um ponteiro é um tipo especial de variável que armazena o endereço de memória de outra variável. Em vez de guardar um valor, ele aponta para o local na memória onde esse valor está guardado.
+4. É uma estrutura de dados que armazena uma coleção de elementos onde todos são do mesmo tipo. O exemplo mais comum é o vetor . Um vetor de inteiros só pode conter inteiros; um vetor de caracteres só pode conter caracteres.
+5. É uma estrutura de dados que pode agrupar e armazenar elementos de tipos diferentes em uma única unidade. Em C, o exemplo clássico é a struct, que pode conter campos de tipos distintos, como int, char e double, todos juntos.
+6. A principal vantagem das listas é o uso de memória sob demanda. Elas alocam espaço dinamicamente apenas para os elementos que são realmente adicionados. 
+   Os vetores exigem que o tamanho máximo seja definido na compilação. Se o vetor for alocado para um tamanho grande, mas poucos elementos forem usados, haverá um grande desperdício de memória.
+   Ex:
+  Vetor: Se você declara Contato agenda[1000]; para uma agenda, o programa reserva espaço para 1000 contatos imediatamente, mesmo que a agenda esteja vazia.
+  Lista: Se você usa uma lista encadeada, ela começa vazia. Se você adicionar 5 contatos, a lista alocará memória dinamicamente apenas para esses 5 elementos.
+7. É uma estrutura de dados linear e dinâmica onde os elementos são ligados em sequência através de ponteiros. Cada nó contém duas partes: O dado que ele armazena e um ponteiro que aponta para o próximo nó da lista. 
+   O último nó da lista aponta para NULL, indicando o fim da sequência.
+    Cabeça da Lista
+         V
+  | Dado | Próx | --> | Dado | Próx | --> | Dado | Próx | --> NULL
+    (Nó 1)              (Nó 2)              (Nó 3)
+8. É uma variação da lista encadeada onde cada nó possui, além do dado e do ponteiro para o próximo nó, um segundo ponteiro que aponta para o nó anterior na sequência. 
+   Isso permite a travessia da lista em ambas as direções do início para o fim e do fim para o início.
+      Cabeça da Lista
+             V
+NULL <-- | Ant  | Dado | Próx | --> | Ant  | Dado | Próx | --> | Ant  | Dado | Próx | --> NULL
+             (Nó 1)                     (Nó 2)                     (Nó 3)
+10. Busca Sequencial: É o método de busca mais simples. 
+   Ele percorre a lista elemento por elemento, do início ao fim, comparando cada elemento com o valor buscado. 
+   A busca termina quando o elemento é encontrado ou quando o fim da lista é alcançado.
+   Busca Binária: Este algoritmo é muito mais eficiente, mas exige que a lista ou vetor esteja ordenadao, compara o valor buscado com o elemento no meio do vetor. Se forem iguais, a busca termina.
+   Se o valor buscado for menor que o do meio, o algoritmo repete o processo, mas considerando apenas a primeira metade do vetor.
+   Se o valor buscado for maior que o do meio, o algoritmo repete o processo, considerando apenas a segunda metade do vetor.
+   Isso se repete até o elemento ser encontrado ou o intervalo de busca se tornar vazio.
+11. Insertion Sort: Constrói o vetor ordenado final, um elemento de cada vez. Ele percorre o vetor e, para cada elemento, insere ele na posição correta dentro da parte do vetor que já está ordenada à sua esquerda.
+   Selection Sort: Divide o vetor em duas partes: uma ordenada inicialmente vazia e uma não ordenada. A cada passo, o algoritmo encontra o menor elemento na parte não ordenada e o troca com o primeiro elemento da parte não ordenada, movendo-o assim para o final da parte ordenada.
+   Merge Sort: Ele divide recursivamente o vetor ao meio até que restem apenas vetores de um elemento que, por definição, estão ordenados. Em seguida, ele intercala esses sub-vetores de forma ordenada, subindo na recursão, até que o vetor original esteja completamente ordenado.
+   Count Sort: É um algoritmo não-comparativo. Ele funciona contando o número de ocorrências de cada valor distinto no vetor. Em seguida, com base nessa contagem, ele calcula a posição final de cada elemento e os coloca diretamente no vetor de saída. 
+   Quicksort: Ele escolhe um elemento como pivô. Em seguida, ele particiona o restante do vetor em dois sub-vetores: um com elementos menores que o pivô e outro com elementos maiores. O algoritmo é então chamado recursivamente para os dois sub-vetores, e o processo se repete até o vetor estar ordenado.
